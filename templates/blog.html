@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% block title %}
+<title>Blog Page</title>
+{% endblock title %}
+{% block body %}
+<h1>Blog Page</h1>
+<form method='POST' action="/blogout">
+<div class="form-group">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="title" name='title'>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Author</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username" name='author' value='{{current_user.username}}'>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name='content'></textarea>
+  </div>
+  <input type="submit" value='POST' class='btn btn-primary'>
+</div>  
+</form> 
+{% endblock body %}

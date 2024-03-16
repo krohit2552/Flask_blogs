@@ -1,0 +1,8 @@
+Flask
+SQLAlchemy
+LoginManager
+login_user
+UserMixin
+logout_user
+current_user
+datetime
