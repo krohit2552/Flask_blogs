@@ -7,9 +7,14 @@
   {% if messages %}
     <ul class=flashes>
     {% for category, message in messages %}
-      {% if category == 'warning' %}
-        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-            <strong>message:</strong> {{ message }}
+      {% if category == 'success' %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success:</strong> {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% elif category == 'danger' %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error:</strong> {{ message }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       {% endif %}
@@ -39,4 +44,3 @@
     {% endfor %}
   </div>
 {% endblock body %}
-

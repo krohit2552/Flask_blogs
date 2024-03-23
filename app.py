@@ -81,6 +81,7 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
+    flash("You have been logged out successfully",'success')
     return redirect('/')
 @app.route("/blogout",methods=['GET','POST'])
 def blogpost():
